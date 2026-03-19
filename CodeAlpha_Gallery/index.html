@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vista gallery · lightbox & filters</title>
+  <!-- CSS external -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="gallery-wrapper">
+    <h1 class="page-headline"> <b>Gallery</b></h1>
+
+    <!-- filter bar (bonus) -->
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-button is-active" data-filter="*">all</button>
+      <button class="filter-button" data-filter="coastal">coastal</button>
+      <button class="filter-button" data-filter="urban">urban</button>
+      <button class="filter-button" data-filter="minimal">minimal</button>
+    </div>
+
+    <!-- thumbnail grid -->
+    <div class="grid" id="gridContainer"></div>
+
+    <!-- lightbox overlay -->
+    <div class="lightbox" id="lightboxOverlay" role="dialog" aria-label="image lightbox">
+      <button class="lightbox__close" id="closeLightboxBtn" aria-label="close lightbox">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" id="prevImageBtn" aria-label="previous image">‹</button>
+      <button class="lightbox__nav lightbox__nav--next" id="nextImageBtn" aria-label="next image">›</button>
+      <div class="lightbox__content">
+        <img class="lightbox__image" id="lightboxImage" src="" alt="">
+        <div class="lightbox__caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JavaScript external -->
+  <script src="script.js"></script>
+</body>
+</html>
